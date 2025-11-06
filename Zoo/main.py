@@ -1,12 +1,7 @@
-from animal import Lion, Elephant, Monkey
-from zoo import zoo_showcase
+from animal import Lion,Pet
 
-# Create animal objects
-zoo = [
-    Lion("Leo", 5),
-    Elephant("Ella", 10),
-    Monkey("Momo", 3)
-]
+leo = Lion("Leo")
+print(f"{leo._name} says: {leo.make_sound()}")
 
-# Run the zoo simulation
-zoo_showcase(zoo)
+tommy = Pet("Tommy","Golden Shepherd")
+print(f"{tommy._name} is of breed: {tommy._species} it does a {tommy.make_sound()} and it says {tommy.speak()}")

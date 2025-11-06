@@ -1,27 +1,24 @@
 from abc import ABC, abstractmethod
 
-# Abstract base class
-class Animal(ABC):
-    def __init__(self, name, age):
-        self._name = name          # Encapsulation
-        self._age = age
+class Animal(ABC):  # Abstraction
+    def __init__(self, name):
+        self._name = name  # Encapsulation
 
     @abstractmethod
-    def make_sound(self):
+    def make_sound(self):  # Polymorphism
         pass
 
-    def info(self):
-        return f"{self._name} is {self._age} years old."
-
-# Subclasses with polymorphism
-class Lion(Animal):
+class Lion(Animal):  # Inheritance
     def make_sound(self):
         return "Roar!"
 
-class Elephant(Animal):
+class Pet(Animal):
+    name=""
+    species=""
+    def __init__(self,name,species):
+        self._name,self._species=name,species
+        pass
     def make_sound(self):
-        return "Trumpet!"
-
-class Monkey(Animal):
-    def make_sound(self):
-        return "Chatter!"
+        return "Bark!"
+    def speak(self):
+        return "Bau Bau"
